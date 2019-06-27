@@ -4,7 +4,6 @@ import com.zenika.shoppingcartserver.controller.ShoppintCartController;
 import com.zenika.shoppingcartserver.service.ShoppingCartService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.Assert;
@@ -13,15 +12,16 @@ import org.springframework.util.Assert;
 @SpringBootTest
 public class ShoppingCartServerApplicationTests {
 
-	@Autowired
 	ShoppingCartService shoppingCartService;
-
-	@Autowired
 	ShoppintCartController shoppintCartController;
 
 	@Test
-	public void contextLoads() {
+	public void shoppingCartServiceLoads() {
 		Assert.notNull(shoppingCartService, "shoppingCartService is null");
+	}
+
+	@Test
+	public void shoppingCartControllerLoads() {
 		Assert.notNull(shoppintCartController, "shoppingCartController is null");
 	}
 

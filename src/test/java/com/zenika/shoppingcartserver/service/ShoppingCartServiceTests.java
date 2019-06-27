@@ -48,13 +48,6 @@ public class ShoppingCartServiceTests {
         Assert.assertEquals(150, shoppingCartService.getItemCost(cart, "cheese"));
     }
 
-    @Test
-    public void showCartTest(){
-        ShoppingCart cart = new ShoppingCart();
-        initCart(cart);
-        shoppingCartService.show(cart);
-    }
-
     private void initCart(ShoppingCart cart) {
         Item item1 = new Item("cookies", 5);
         Item item2 = new Item("cheese", 10);
